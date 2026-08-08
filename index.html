@@ -1,369 +1,459 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Malin 🎀</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<title>Happy Birthday Malin 🎀</title>
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Trebuchet MS", sans-serif;
-      background: linear-gradient(135deg, #ffe5f1, #fff5fa);
-      color: #7b405c;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow-x: hidden;
-    }
+<style>
 
-    .container {
-      width: 92%;
-      max-width: 600px;
-      min-height: 600px;
-      background: rgba(255,255,255,0.8);
-      border: 3px solid #f5b8d0;
-      border-radius: 30px;
-      padding: 35px 25px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(180, 100, 140, 0.15);
-      position: relative;
-      overflow: hidden;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    .bow {
-      font-size: 55px;
-      margin-bottom: 5px;
-    }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", sans-serif;
+  background: linear-gradient(135deg, #ffe1ee, #fff7fb);
+  color: #7b405d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
-    h1 {
-      color: #d45d91;
-      font-size: 30px;
-      margin: 10px 0;
-    }
+.container {
+  width: 92%;
+  max-width: 600px;
+  min-height: 600px;
+  background: rgba(255,255,255,0.9);
+  border: 3px solid #f4b6d0;
+  border-radius: 30px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(180,100,140,0.18);
+  position: relative;
+}
 
-    h2 {
-      color: #c05282;
-      font-size: 23px;
-      line-height: 1.4;
-    }
+.bow {
+  font-size: 55px;
+}
 
-    p {
-      font-size: 17px;
-      line-height: 1.6;
-    }
+h1 {
+  color: #d45d91;
+  font-size: 30px;
+}
 
-    .question-number {
-      font-size: 14px;
-      color: #b77a96;
-      margin-bottom: 8px;
-    }
+h2 {
+  color: #c05282;
+  font-size: 23px;
+  line-height: 1.5;
+}
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      margin-top: 30px;
-      min-height: 100px;
-      position: relative;
-    }
+p {
+  font-size: 17px;
+  line-height: 1.6;
+}
 
-    button {
-      border: none;
-      border-radius: 50px;
-      padding: 15px 28px;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.35s ease;
-      font-family: inherit;
-    }
+.question-number {
+  font-size: 14px;
+  color: #b47793;
+  margin-top: 10px;
+}
 
-    #yesBtn {
-      background: #ed78a9;
-      color: white;
-      box-shadow: 0 5px 15px rgba(220, 100, 150, 0.25);
-    }
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  min-height: 120px;
+  margin-top: 20px;
+}
 
-    #noBtn {
-      background: #f2d9e4;
-      color: #8c5570;
-    }
+button {
+  border: none;
+  border-radius: 50px;
+  padding: 15px 28px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.35s ease;
+}
 
-    button:hover {
-      transform: scale(1.05);
-    }
+#yesBtn {
+  background: #ed78a9;
+  color: white;
+  box-shadow: 0 6px 18px rgba(220,100,150,0.25);
+}
 
-    #giftImage {
-      display: none;
-      width: 80%;
-      max-width: 350px;
-      max-height: 250px;
-      object-fit: contain;
-      margin: 20px auto 0;
-      border-radius: 20px;
-      border: 3px solid #f3b3cc;
-    }
+#noBtn {
+  background: #f1d7e3;
+  color: #87556d;
+}
 
-    #message {
-      min-height: 28px;
-      margin-top: 18px;
-      font-weight: bold;
-      color: #d45d91;
-    }
+#giftImage {
+  display: none;
+  width: 85%;
+  max-width: 350px;
+  max-height: 260px;
+  object-fit: contain;
+  margin: 20px auto;
+  border-radius: 20px;
+  border: 3px solid #f2b2ca;
+}
 
-    .hidden {
-      display: none;
-    }
+#message {
+  min-height: 30px;
+  margin-top: 15px;
+  color: #d45d91;
+  font-weight: bold;
+}
 
-    .final {
-      animation: pop 0.8s ease;
-    }
+.small {
+  font-size: 13px;
+  color: #a87891;
+  margin-top: 20px;
+}
 
-    .heart {
-      position: fixed;
-      bottom: -30px;
-      font-size: 22px;
-      animation: floatUp 4s linear forwards;
-      pointer-events: none;
-    }
+.hidden {
+  display: none;
+}
 
-    @keyframes floatUp {
-      from {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      to {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
+.heart {
+  position: fixed;
+  bottom: -30px;
+  font-size: 25px;
+  animation: float 4s linear forwards;
+  pointer-events: none;
+}
 
-    @keyframes pop {
-      0% {
-        transform: scale(0.7);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
+@keyframes float {
 
-    .small-note {
-      font-size: 13px;
-      color: #a8738b;
-      margin-top: 25px;
-    }
-  </style>
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+
+}
+
+@keyframes pop {
+
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <div id="quiz">
+<div id="quiz">
 
-      <div class="bow">🎀</div>
+<div class="bow">🎀</div>
 
-      <div class="question-number" id="questionNumber">
-        Question 1 / 6
-      </div>
+<div class="question-number" id="questionNumber">
+Question 1 / 6
+</div>
 
-      <h2 id="question">
-        Kau suka tak present yang aku bagi ni? 🎁
-      </h2>
+<h2 id="question">
+Kau suka tak present yang aku bagi ni? 🎁
+</h2>
 
-      <p id="extraText"></p>
+<p id="extraText"></p>
 
-      <img id="giftImage" src="gift.jpg" alt="Birthday gift">
+<img
+id="giftImage"
+src="Screenshot_20260809_064713_TikTok.jpg"
+alt="Birthday gift"
+>
 
-      <div class="buttons">
-        <button id="yesBtn">YES 💗</button>
-        <button id="noBtn">NO 😭</button>
-      </div>
+<div class="buttons">
 
-      <div id="message"></div>
+<button id="yesBtn">
+YES 💗
+</button>
 
-      <div class="small-note">
-        Choose wisely hehe 👀
-      </div>
+<button id="noBtn">
+NO 😭
+</button>
 
-    </div>
+</div>
 
-    <div id="finalPage" class="hidden final">
+<div id="message"></div>
 
-      <div class="bow">🎀</div>
+<div class="small">
+Choose wisely hehe 👀
+</div>
 
-      <h1>HAPPY BIRTHDAY MALIN!! 🎂💗</h1>
+</div>
 
-      <p>
-        YAYYY akhirnya tekan YES juga 😭
-      </p>
 
-      <p>
-        Semoga birthday kali ni penuh dengan happiness,
-        laughter, good memories and lots of love! 🌷
-      </p>
+<div id="finalPage" class="hidden">
 
-      <p>
-        Thank you sebab jadi kawan aku.
-        Stay cute, stay chaotic and jangan lupa aku 😭🎀
-      </p>
+<div class="bow">🎀</div>
 
-      <div style="font-size:55px; margin-top:25px;">
-        🎂🎁💗🌷🎀
-      </div>
+<h1>
+HAPPY BIRTHDAY MALIN!! 🎂💗
+</h1>
 
-    </div>
+<p>
+YAYYY akhirnya tekan YES juga 😭
+</p>
 
-  </div>
+<p>
+Semoga birthday kali ni penuh dengan happiness,
+laughter, good memories and lots of love! 🌷
+</p>
 
-  <script>
+<p>
+Thank you sebab jadi kawan aku.
+Stay cute, stay chaotic and jangan lupa aku 😭🎀
+</p>
 
-    const questions = [
-      {
-        text: "Kau suka tak present yang aku bagi ni? 🎁",
-        extra: ""
-      },
-      {
-        text: "Are you ready nak jadi tua? 😭🙏🏻",
-        extra: "(Aku muda lagi 😆)"
-      },
-      {
-        text: "Are you cute? 🎀",
-        extra: ""
-      },
-      {
-        text: "Am I an annoying person? 😇",
-        extra: ""
-      },
-      {
-        text: "Aku nak bagi hadiah ni, nak tak? 🎁",
-        extra: ""
-      },
-      {
-        text: "Kalau kau dah realise yang bila kau tekan NO banyak kali, button YES tu makin besar... cuba tekan NO banyak kali this time 😭",
-        extra: ""
-      }
-    ];
+<div style="font-size:55px;">
+🎂🎁💗🌷🎀
+</div>
 
-    let currentQuestion = 0;
-    let yesSize = 1;
+</div>
 
-    const question = document.getElementById("question");
-    const extraText = document.getElementById("extraText");
-    const questionNumber = document.getElementById("questionNumber");
-    const yesBtn = document.getElementById("yesBtn");
-    const noBtn = document.getElementById("noBtn");
-    const message = document.getElementById("message");
-    const giftImage = document.getElementById("giftImage");
-    const quiz = document.getElementById("quiz");
-    const finalPage = document.getElementById("finalPage");
+</div>
 
-    const noMessages = [
-      "Hmm... cuba lagi 😭",
-      "Wrong answer babe 😭",
-      "Are you sure?? 👀",
-      "Nice try HAHAHA",
-      "YES nampak makin besar tak? 😭",
-      "Why are you pressing NO 😭",
-      "Girl... please 💀",
-      "The correct answer is obviously YES 😭🎀"
-    ];
 
-    function loadQuestion() {
+<script>
 
-      questionNumber.textContent =
-        "Question " + (currentQuestion + 1) + " / 6";
+const questions = [
 
-      question.textContent = questions[currentQuestion].text;
-      extraText.textContent = questions[currentQuestion].extra;
+{
+text: "Kau suka tak present yang aku bagi ni? 🎁",
+extra: ""
+},
 
-      message.textContent = "";
+{
+text: "Are you ready nak jadi tua? 😭🙏🏻",
+extra: "(Aku muda lagi 😆)"
+},
 
-      yesSize = 1;
-      yesBtn.style.transform = "scale(1)";
+{
+text: "Are you cute? 🎀",
+extra: ""
+},
 
-      if (currentQuestion === 4) {
-        giftImage.style.display = "block";
-      } else {
-        giftImage.style.display = "none";
-      }
+{
+text: "Am I an annoying person? 😇",
+extra: ""
+},
 
-    }
+{
+text: "Aku nak bagi hadiah ni, nak tak? 🎁",
+extra: ""
+},
 
-    noBtn.addEventListener("click", function() {
+{
+text: "Kalau kau dah realise yang bila kau tekan NO banyak kali, button YES tu makin besar... cuba tekan NO banyak kali this time 😭",
+extra: ""
+}
 
-      yesSize += 0.35;
+];
 
-      yesBtn.style.transform =
-        "scale(" + yesSize + ")";
 
-      const randomMessage =
-        noMessages[Math.floor(Math.random() * noMessages.length)];
+let currentQuestion = 0;
 
-      message.textContent = randomMessage;
+let yesSize = 1;
 
-    });
 
-    yesBtn.addEventListener("click", function() {
+const question =
+document.getElementById("question");
 
-      if (currentQuestion < questions.length - 1) {
+const extraText =
+document.getElementById("extraText");
 
-        currentQuestion++;
+const questionNumber =
+document.getElementById("questionNumber");
 
-        loadQuestion();
+const yesBtn =
+document.getElementById("yesBtn");
 
-      } else {
+const noBtn =
+document.getElementById("noBtn");
 
-        quiz.classList.add("hidden");
-        finalPage.classList.remove("hidden");
+const message =
+document.getElementById("message");
 
-        createHearts();
+const giftImage =
+document.getElementById("giftImage");
 
-      }
+const quiz =
+document.getElementById("quiz");
 
-    });
+const finalPage =
+document.getElementById("finalPage");
 
-    function createHearts() {
 
-      for (let i = 0; i < 35; i++) {
+const noMessages = [
 
-        const heart = document.createElement("div");
+"Hmm... cuba lagi 😭",
 
-        heart.className = "heart";
+"Wrong answer babe 😭",
 
-        const hearts = ["💗", "🎀", "💖", "💕", "🌷"];
+"Are you sure?? 👀",
 
-        heart.textContent =
-          hearts[Math.floor(Math.random() * hearts.length)];
+"Nice try HAHAHA",
 
-        heart.style.left =
-          Math.random() * 100 + "vw";
+"YES nampak makin besar tak? 😭",
 
-        heart.style.animationDelay =
-          Math.random() * 3 + "s";
+"Why are you pressing NO 😭",
 
-        document.body.appendChild(heart);
+"Girl... please 💀",
 
-        setTimeout(() => {
-          heart.remove();
-        }, 7000);
+"The correct answer is obviously YES 😭🎀"
 
-      }
+];
 
-    }
 
-    loadQuestion();
+function loadQuestion() {
 
-  </script>
+questionNumber.textContent =
+"Question " + (currentQuestion + 1) + " / 6";
+
+question.textContent =
+questions[currentQuestion].text;
+
+extraText.textContent =
+questions[currentQuestion].extra;
+
+message.textContent = "";
+
+yesSize = 1;
+
+yesBtn.style.transform =
+"scale(1)";
+
+
+if (currentQuestion === 4) {
+
+giftImage.style.display =
+"block";
+
+} else {
+
+giftImage.style.display =
+"none";
+
+}
+
+}
+
+
+noBtn.addEventListener("click", function() {
+
+yesSize += 0.35;
+
+yesBtn.style.transform =
+"scale(" + yesSize + ")";
+
+
+const randomMessage =
+noMessages[
+Math.floor(
+Math.random() * noMessages.length
+)
+];
+
+message.textContent =
+randomMessage;
+
+});
+
+
+yesBtn.addEventListener("click", function() {
+
+if (currentQuestion < questions.length - 1) {
+
+currentQuestion++;
+
+loadQuestion();
+
+}
+
+else {
+
+quiz.classList.add("hidden");
+
+finalPage.classList.remove("hidden");
+
+createHearts();
+
+}
+
+});
+
+
+function createHearts() {
+
+for (let i = 0; i < 35; i++) {
+
+const heart =
+document.createElement("div");
+
+heart.className =
+"heart";
+
+const hearts = [
+"💗",
+"🎀",
+"💖",
+"💕",
+"🌷"
+];
+
+heart.textContent =
+hearts[
+Math.floor(
+Math.random() * hearts.length
+)
+];
+
+heart.style.left =
+Math.random() * 100 + "vw";
+
+heart.style.animationDelay =
+Math.random() * 3 + "s";
+
+document.body.appendChild(heart);
+
+
+setTimeout(function() {
+
+heart.remove();
+
+}, 7000);
+
+}
+
+}
+
+
+loadQuestion();
+
+</script>
 
 </body>
-  </html>
+</html>
